@@ -1,0 +1,53 @@
+//Java program
+//note for Dan: Java is a very literal language so its more verbose than python. it's a positive because it compiles quickly 
+//but it sucks because there's a lot more keywords (i.e. 'public' and 'private', referring to the scope of the variables)
+//and it does not inherently know what type of variable you are creating hence the 'String' and 'double' keywords before the
+//variables...also since it doesn't use 'white space' like python, you have to specify your blocks with {} and 
+//end lines with semi-colons...total buzzkill
+
+
+//Student constructor - goes along with the 'test file' which will create an instantiation of the object
+public class Student {
+
+	//instance variables
+	private String firstName;
+	private String lastName;
+	double gpa;
+	
+	//constructor - note that the name of the constructor matches the file/class name
+	public Student ( String fName, String lName, double gradePointAvg) {  //these variables exist only as parameters for the arguments they will take
+		firstName = fName; //telling the constructor that these arguments will be assigned to the instance variables
+		lastName = lName;
+		gpa = gradePointAvg;
+	} // end constructor 
+	
+	//now the rest are methods which will be able to be used for each instance of an object the constructor creates
+	// note that 'return' keyword indicates that the method will be accessing a stored variable (this still continues to 
+	// baffle me at times)
+	
+	//set first name
+	public void SetFirstName ( String fName ) {
+		firstName = fName;
+	}//end setFirstName
+	public String GetFirstName () {
+		return firstName ;	
+	} //end getFirstName
+	public void SetLastName ( String lName ) {
+		lastName = lName;
+	}// end SetLastName
+	public String GetLastName () {
+		return lastName;
+	}// end GetLastName
+	public void SetGPA ( double gradePointAvg ) {
+		gpa = gradePointAvg;
+	}//end SetGPA 
+	public double GetGPA () {
+		return gpa;
+	}//end GetGPA
+	public void IncreaseGPA ( double percentage ) {
+		gpa = gpa * (1+(percentage/100));
+	}//end IncreaseGPA function - parameter takes whole number percent
+	 
+} //end class
+
+
