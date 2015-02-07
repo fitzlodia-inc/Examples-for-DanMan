@@ -1,0 +1,26 @@
+//Java 
+// refers to the Student constructor class and creates actual instances of the Student object
+//Test the student constructor with some objects and manipulate properties
+public class StudentTest {
+
+	public static void main(String[] args) {
+		Student student1 = new Student ("Danny", "Melode", 3.20);
+		Student student2 = new Student ("Ryan", "Fitzpatrick", 3.50);
+		
+		//print student objs
+		//again, shitty java syntax that is not nearly as obvious as python but see if you can parse out what is going on
+		//ask questions and shit, homie
+		System.out.printf ("Student 1: "+student1.GetFirstName()+" "+student1.GetLastName()+" GPA is %.2f\n",student1.GetGPA());
+		System.out.printf ("Student 2: "+student2.GetFirstName()+" "+student2.GetLastName()+" GPA is %.2f\n",student2.GetGPA());
+		
+		//alter gpa property
+		System.out.println ("Increasing student GPA by 10%");
+		student1.IncreaseGPA(10); //percent as whole number
+		student2.IncreaseGPA(10);
+		//display new GPAs
+		System.out.printf ("Student 1: "+student1.GetFirstName()+" "+student1.GetLastName()+" GPA is %.2f\n",student1.GetGPA());
+		System.out.printf ("Student 2: "+student2.GetFirstName()+" "+student2.GetLastName()+" GPA is %.2f\n",student2.GetGPA());
+		
+	}//end main
+
+}//end class
